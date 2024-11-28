@@ -1,0 +1,304 @@
+/* Home.css */
+
+/* General Container Styling */ 
+.home-container {
+  background-color: #000; /* Black background */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px 20px 20px; /* Added top padding to avoid navbar overlap */
+  overflow-y: scroll;
+}
+
+/*Laptop Styling */
+.realistic-laptop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px; /* Set to 1000px */
+  max-width: 90vw;
+  margin-top: 2rem;
+  margin-bottom: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Laptop Frame */
+.laptop-screen {
+  position: relative;
+  background-color: #222;
+  width: 100%;
+  height: 250px;
+  padding: 10px; /* Padding around all sides */
+  border-radius: 12px;
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Camera */
+.camera {
+  position: relative;
+  background-color: #323232;
+  width: 13px; /* Adjusted width and height */
+  height: 13px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  box-shadow: inset 1px 2px 5px rgba(174, 174, 174, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Inner Screen */
+.inner-screen {
+  position: relative;
+  background-color: #343434;
+  width: 95%;
+  height: 190px;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: inset 0 5px 10px rgba(127, 127, 127, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.laptop-screen:hover {
+  border: 2px solid #555;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Eye Animation within Screen */
+.eye-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.fish-eye {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.fish-pupil {
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  background-color: #222222;
+  border-radius: 50%;
+  transition: transform 0.1s ease-out;
+}
+
+/* Laptop Base */
+.laptop-base {
+  background-color: #333;
+  width: 100%;
+  height: 70px;
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.laptop-base:hover {
+  box-shadow: 0 0 10px rgba(75, 75, 75, 0.2);
+}
+
+.keyboard {
+  background-color: #444;
+  width: 90%;
+  height: 27px;
+  margin-top: 7px;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+}
+
+.trackpad {
+  background-color: #444;
+  width: 30%;
+  height: 15px;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+.trackpad:hover{
+  background-color: #565656;
+}
+
+/* Full-Width Card Styling */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  background-color: #1a1a1a;
+  color: #fff;
+  margin: 10px;
+  padding: 150px;
+  width: 95%; /* 95% of container */
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(128, 128, 128, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: rgb(37, 37, 37);
+  box-shadow: 6px 8px 26px rgba(158, 158, 158, 0.6);
+  height: 510px;
+}
+
+/* Dark Theme Card */
+.card.home-card {
+  background: linear-gradient(145deg, rgba(20, 24, 30, 0.8), rgba(10, 12, 18, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s, box-shadow 0.5s;
+  overflow: hidden;
+}
+
+.card.home-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('C:\Users\HP\OneDrive\Desktop\EG\portfolio\public\nancytyagi.jpg'); 
+}
+
+.card.home-card:hover .profile-image {
+  transform: scale(1.1);
+  border-color: #58a6ff;
+}
+
+/* Home Text */
+.home-text h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #58a6ff;
+  margin-bottom: 10px;
+  transition: color 0.5s;
+}
+
+.home-text h1 span {
+  color: #c9d1d9;
+}
+
+.home-text p {
+  font-size: 1.2rem;
+  color: #8b949e;
+  margin: 0;
+}
+
+.card.home-card:hover h1 {
+  color: #f78166;
+}
+
+/* Glow Animation */
+.glow-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.2), rgba(88, 166, 255, 0));
+  opacity: 0.5;
+  filter: blur(20px);
+  animation: glow 5s infinite ease-in-out;
+  z-index: -1;
+}
+
+#skills-overviewcard{
+width: 95%;
+max-width: 1200px;
+padding: 60px;
+background: linear-gradient(145deg, #232323, #1a1a1a); /* Background gradient */
+color: #e0e0e0;
+border-radius: 20px;
+box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6); /* Box shadow for depth */
+margin: 20px auto;
+}
+.certificate-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #03820c; /* Green accent color */
+}
+
+@keyframes glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* Responsive Height Adjustments */
+@media (max-width: 768px) {
+  .card {
+    height: 400px;
+    padding: 100px;
+  }
+  .card:hover {
+    height: 410px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 300px;
+    padding: 50px;
+  }
+  .card:hover {
+    height: 310px;
+  }
+  
+}
